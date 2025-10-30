@@ -1,7 +1,7 @@
 """
 Augmentation data models
 """
-from typing import Dict, List, Optional
+from typing import Dict, List, Literal, Optional
 from pydantic import BaseModel, Field, conlist
 
 from app.models.eeg import EEGData
@@ -49,4 +49,28 @@ class AugmentationRequest(BaseModel):
         ge=1,
         le=1000,
         description="Number of augmented samples to aggregate per method"
+    )
+
+
+class DownloadRequest(BaseModel):
+    """
+    Download request for augmentation data
+    """
+    motionType: str = Field(
+        ...,
+        description="MI motion type (left, right, foot, tongue)"
+    )
+    method: str = Field(
+        ...,
+        description="Augmentation method (tcn, gan, vae, diffusion)"
+    )
+    numSamples: int = Field(
+        ...,
+        ge=1,
+        le=10000,
+        description="Number of samples to download"
+    )
+    fileType: Literal["npz", "csv"] = Field(
+        ...,
+        description="File type to download (npz or csv)"
     )
