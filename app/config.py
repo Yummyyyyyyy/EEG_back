@@ -16,7 +16,7 @@ class Settings(BaseSettings):
 
     # 服务器配置
     HOST: str = "0.0.0.0"
-    PORT: int = 8001  # 使用8001端口，避免与其他服务冲突
+    PORT: int = 8000  # 使用8001端口，避免与其他服务冲突
 
     # CORS 配置
     CORS_ORIGINS: List[str] = [

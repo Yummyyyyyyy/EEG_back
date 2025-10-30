@@ -244,6 +244,10 @@ class DataLoader:
         # 提取目标5个通道
         channel_data = self._extract_target_channels(trial_data_full)
 
+        # 转换为微伏 (uV)
+        for key in channel_data:
+            channel_data[key] = channel_data[key] * 1e6
+
         # 生成时间标签
         time_labels = self._generate_time_labels(dur, subject_data['sfreq'])
 
