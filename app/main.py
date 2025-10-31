@@ -5,7 +5,7 @@ EEG数据处理与分析后端系统
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
-from app.api import trials, augmentation
+from app.api import trials, augmentation, classification
 
 # 创建 FastAPI 应用实例
 app = FastAPI(
@@ -28,6 +28,7 @@ app.add_middleware(
 # 注册路由
 app.include_router(trials.router)
 app.include_router(augmentation.router)
+app.include_router(classification.router)
 
 
 # 根路径 - 健康检查
