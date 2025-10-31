@@ -37,11 +37,11 @@ class DownloadService:
 
         # File mapping for different methods
         self._tcn_file_map = {
-            "left": "left_1000.npz",
-            "right": "right_1000.npz",
-            "foot": "feet_1000.npz",
-            "feet": "feet_1000.npz",
-            "tongue": "tongue_1000.npz",
+            "left": "left_500.npz",
+            "right": "right_500.npz",
+            "foot": "feet_500.npz",
+            "feet": "feet_500.npz",
+            "tongue": "tongue_500.npz",
         }
 
         self._diffusion_file_map = {

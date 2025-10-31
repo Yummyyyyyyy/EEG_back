@@ -24,11 +24,11 @@ class AugmentationService:
     STD_THRESHOLD = 1e-6
 
     MOTION_FILE_MAP = {
-        "left": "left_1000.npz",
-        "right": "right_1000.npz",
-        "foot": "feet_1000.npz",
-        "feet": "feet_1000.npz",
-        "tongue": "tongue_1000.npz",
+        "left": "left_500.npz",
+        "right": "right_500.npz",
+        "foot": "feet_500.npz",
+        "feet": "feet_500.npz",
+        "tongue": "tongue_500.npz",
     }
 
     MOTION_EVENT_MAP = {
